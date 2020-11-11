@@ -1,0 +1,20 @@
+Package: myRDBES
+Title: My functions usefull to use wiht RDBES exchange format.
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Marco A.",
+           family = "Ámez Fernández",
+           role = c("aut", "cre"),
+           email = "marco.amez@gmail.com")
+Description: My functions usefull to use wiht RDBES exchange format.
+License: `use_gpl3_license()`
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: sapmuebase,
+    httr,
+    RCurl,
+    readxl
+Depends: 
+    R (>= 2.10)
