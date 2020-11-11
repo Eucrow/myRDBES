@@ -7,12 +7,12 @@
 importRDBESFile(file, path = getwd())
 }
 \arguments{
-\item{file}{vector with the Accidentals filenames}
+\item{file}{vector with the Accidentals filenames.}
 
 \item{path}{path of the files. The working directory by default.}
 }
 \value{
-Return list of dataframes
+Return list of dataframes.
 }
 \description{
 Read the data as is, without any kind of validation. The purpouse of this

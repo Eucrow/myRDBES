@@ -3,9 +3,9 @@
 #' Read the data as is, without any kind of validation. The purpouse of this
 #' function is facilitate a simple validation by table.
 #'
-#' @param file vector with the Accidentals filenames
+#' @param file vector with the Accidentals filenames.
 #' @param path path of the files. The working directory by default.
-#' @return Return list of dataframes
+#' @return Return list of dataframes.
 #' @export
 
 importRDBESFile <- function(file, path = getwd()){

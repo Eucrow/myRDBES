@@ -21,18 +21,19 @@ The goal of this function is get the tables
 of the hierarchy in a list of dataframes to facilitate some checks
 in R prior to upload.
 
-No validation of any king is carried out in this proccess.
+No validation of any kind is carried out in this proccess.
 
 ## Datasets available
 A dataset of every table of all hierarchies: BV, CE, CL, DE, FM, FO, FT, LE, LO,
 OS, SA, SD, SL, SS, TE, VD and VS.
 
-All datasets contain two variables:
+All those datasets contain two variables:
 
 - Field Name
 - R Name
 
-The order of variables is the same order of the variables in the table.
+The order of variables in the dataset is the same order of the variables in the
+table.
 
 This dataset has been obtained by the data model spreadsheet available in
 [RDBES gitHub repository](https://api.github.com/repos/ices-tools-dev/RDBES/contents/Documents).
