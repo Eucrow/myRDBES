@@ -28,6 +28,15 @@ importRDBESFile <- function(file, path = getwd()){
   # Split by comma
   complete <- lapply(complete,function(x){
     splitted <- apply(x, 1, function(y){
+    # To split by comma a row, previously we have to check if the last
+    # character is a comma. If this is the case it means that the last field
+    # is empty and strsplit function ignore the last comma because there aren't
+    # any character after. So I add a white space
+    # TODO: Are there any best way to manage it?
+      if(substr(y['complete'], nchar(y['complete']), nchar(y['complete']))==","){
+        y['complete'] <- paste0(y['complete'], " ")
+
+      }
       strsplit(y['complete'], ",")
     })
     df <- data.frame(matrix(unlist(splitted), nrow=length(splitted), byrow=T))
@@ -41,7 +50,7 @@ importRDBESFile <- function(file, path = getwd()){
     table_name <- unique(x[[1]])
     vn <- eval(as.name(table_name))
     vn <- vn[['RName']]
-    colnames(x) <- vn[(length(vn)-ncol(x))+1:ncol(x)]
+    colnames(x) <- vn[((length(vn)-ncol(x))+1):length(vn)]
     return(x)
   })
 
