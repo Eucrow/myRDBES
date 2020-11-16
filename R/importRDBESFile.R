@@ -11,7 +11,7 @@
 importRDBESFile <- function(file, path = getwd()){
 
   # open connection
-  con <- file(paste(getwd(), path_data, file, sep="/"))
+  con <- file(paste(path, file, sep="/"))
 
   # import data
   complete <- readLines(con)
